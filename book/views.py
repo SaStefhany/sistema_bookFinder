@@ -1,6 +1,21 @@
 from django.shortcuts import render
 
-# Create your views here.
+def home(request):
+    return render(request, 'finder/home.html')
 
-def Listagem(request):
-    return render(request, "book/index.html")
+def pesquisar(request):
+    return render(request, 'finder/pesquisar.html')
+
+def cadastrar(request):
+    return render(request, 'finder/cadastrar.html')
+
+def listagem(request):
+    return render(request, 'finder/listagem.html')
+
+# views.py
+def home(request):
+    return render(request, 'finder/finder.html')  
+
+
+
+

@@ -1,9 +1,12 @@
-
-from django.contrib import admin
 from django.urls import path
 from . import views
 
-
 urlpatterns = [
-    path('', views.Listagem, name='listagem'),
+    path('', views.home, name='finder'),
+    path('pesquisar/', views.pesquisar, name='pesquisar'),
+    path('cadastrar/', views.cadastrar, name='cadastrar'),
+    path('listagem/', views.listagem, name='listagem'),
 ]
+
+
+

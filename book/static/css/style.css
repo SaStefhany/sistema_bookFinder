@@ -1,0 +1,39 @@
+header{
+    background-color: aliceblue !important;
+    padding: 5em !important;
+        text-align: center !important;
+
+}
+
+.titulo{
+    text-align: center !important;
+    font-weight: bold !important;
+    font-size: 5em !important; 
+}
+
+.btn-opcao{
+    width: 100% !important;
+    background-color: rgb(245, 215, 215) !important;
+    text-align: center !important;
+    padding: 3em !important;
+    margin-top: 1em !important;
+    border-radius: 70px;
+}
+
+main{
+    margin-left: 30% !important;
+    margin-right: 30% !important;
+}
+
+main a{
+    text-decoration: none !important;
+}
+
+
+
+footer{
+    background-color: aliceblue !important;
+    padding: 5em !important;
+    text-align: center !important;
+
+}

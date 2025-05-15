@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'pesquisar' %}">
+  <div class="btn-opcao">
+    <h3>Pesquisar Livro</h3>
+  </div>
+</a>
+
+<a href="{% url 'cadastrar' %}">
+  <div class="btn-opcao">
+    <h3>Cadastrar Livro</h3>
+  </div>
+</a>
+
+<a href="{% url 'listagem' %}">
+  <div class="btn-opcao">
+    <h3>Listagem Geral</h3>
+  </div>
+</a>
+    
+</body>
+</html>
+
+
