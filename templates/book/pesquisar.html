@@ -1,0 +1,67 @@
+
+
+  {% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BookFinder</title>
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="{% static 'css/bok.css' %}" />
+</head>
+<body>
+    <div class="container-bok">
+        <h1>BookFinder</h1>
+        <br>
+         <!-- Formulário de pesquisa -->
+        <form method="GET" action="{% url 'pesquisar' %}">
+        <br>
+         {% if livros %}
+            <h2>Resultados para "{{ query }}":</h2>
+
+            <hr>
+
+            {% for livro in livros %}
+                <h1>{{ livro.titulo }}</h1>
+                <h3>{{ livro.autor }}</h3>
+                <h3>{{ livro.genero }}</h3>
+                <h3><a href="#">Ver detalhes</a></h3>
+
+                <hr>
+            {% endfor %}
+
+            {% else %}
+
+            {% if query %}
+                <p>Nenhum livro encontrado para "{{ query }}".</p>
+            {% else %}
+                <p>Digite um termo para pesquisar livros.</p>
+            {% endif %}
+        {% endif %}
+        <form method="GET" action="{% url 'pesquisar' %}">
+    <input type="text" name="query" placeholder="Digite o título ou autor" required>
+    <button type="submit" class="btn">Pesquisar</button>
+</form>
+
+
+        <h2>Título</h2>
+        <h2>Autor</h2>
+        <h2>Categoria</h2>
+
+        <hr>
+
+        <h1>Título do livro 1</h1>
+        <h3>Autor 1</h3>
+        <h3>Categoria 1</h3>
+        <h3>Ver detalhes</h3>
+
+        <hr>
+
+        <h1>Título do livro 2</h1>
+        <h3>Autor 2</h3>
+        <h3>Categoria 2</h3>
+        <h3>Ver detalhes</h3>
+    </div>
+</body>
+</html>
