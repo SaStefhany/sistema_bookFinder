@@ -21,7 +21,6 @@ def pesquisar(request):
 
     return render(request, 'book/pesquisar.html', {'livros': livros, 'query': query})
 
-
 def cadastrar(request):
     if request.method == "POST":
         titulo = request.POST.get('titulo')
@@ -46,3 +45,13 @@ def cadastrar(request):
 def listagem(request):
     livros = Livro.objects.all()
     return render(request, 'book/listagem.html', {'livros': livros})
+
+def excluir_livro(request, livro_id):
+    livro = Livro.objects.get(id=livro_id)
+    livro.delete()
+    return redirect('listagem')
+
+def detalhes_livro(request, livro_id):
+    livro = Livro.objects.get(id=livro_id)
+    return render(request, 'book/detalhes.html', {'livro': livro})
+

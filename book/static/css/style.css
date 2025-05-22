@@ -1,5 +1,5 @@
 header{
-    background-color: aliceblue !important;
+    background-color: rgb(245, 245, 245) !important;
     padding: 5em !important;
         text-align: center !important;
 
@@ -13,7 +13,7 @@ header{
 
 .btn-opcao{
     width: 100% !important;
-    background-color: rgb(245, 215, 215) !important;
+    background-color: rgb(241, 188, 188) !important;
     text-align: center !important;
     padding: 3em !important;
     margin-top: 1em !important;
@@ -32,7 +32,7 @@ main a{
 
 
 footer{
-    background-color: aliceblue !important;
+    background-color: rgb(255, 255, 255) !important;
     padding: 5em !important;
     text-align: center !important;
 
