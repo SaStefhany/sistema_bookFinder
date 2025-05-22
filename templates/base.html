@@ -2,30 +2,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book Finder - Sistema de Livros</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <a href="{% url 'pesquisar' %}">
-  <div class="btn-opcao">
-    <h3>Pesquisar Livro</h3>
-  </div>
-</a>
 
-<a href="{% url 'cadastrar' %}">
-  <div class="btn-opcao">
-    <h3>Cadastrar Livro</h3>
+<nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home' %}">Book Finder</a>
+    <div class="navbar-nav">
+      <a href="{% url 'pesquisar' %}" class="nav-link">Pesquisar Livro</a>
+      <a href="{% url 'cadastrar' %}" class="nav-link">Cadastrar Livro</a>
+      <a href="{% url 'listagem' %}" class="nav-link">Listagem Geral</a>
+    </div>
   </div>
-</a>
+</nav>
 
-<a href="{% url 'listagem' %}">
-  <div class="btn-opcao">
-    <h3>Listagem Geral</h3>
-  </div>
-</a>
-    
+<div class="container my-4">
+  {% block content %}
+  
+  {% endblock %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
